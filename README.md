@@ -1,84 +1,90 @@
-# Turborepo starter
+# PlexiDraw
 
-This Turborepo starter is maintained by the Turborepo core team.
+**PlexiDraw** is a modern, collaborative drawing application built with Next.js, React, and shadcn/ui. It enables real-time sketching, diagramming, and creative teamwork with a beautiful, responsive UI.
 
-## Using this example
+## Tech Stack
 
-Run the following command:
+### Frontend
+- Next.js
+- React
+- TypeScript
+- shadcn/ui (Radix UI + Tailwind CSS)
+- Framer Motion (animations)
+- Lucide React (icons)
 
-```sh
-npx create-turbo@latest
-```
+### Backend
+- Node.js
+- Express.js (HTTP API)
+- WebSocket (real-time collaboration)
+- Prisma ORM
+- PostgreSQL (or your preferred database)
+- JWT (authentication)
 
-## What's inside?
+## Features
 
-This Turborepo includes the following packages/apps:
+- 🎨 **Intuitive Drawing Tools:** Sketch, diagram, and annotate with ease.
+- 🧑‍🤝‍🧑 **Real-Time Collaboration:** Draw and chat with your team in shared rooms.
+- 🌗 **Theme Toggle:** Instantly switch between Light, Dark, and System themes with a modern toggle.
+- 🧭 **Modern Navbar:** Always-visible, semi-transparent, and responsive navigation bar.
+- 💬 **Chat Modal:** In-room chat with theme-aware message colors for visibility.
+- 🔒 **Authentication:** Only authenticated users can access drawing and chat features.
+- 🛡️ **Access Control:** Guests cannot see or delete authorized users' drawings.
+- 🧹 **Clean UI:** Modern tooltips, centered sign-out, and consistent design throughout.
 
-### Apps and Packages
+## Getting Started
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### Prerequisites
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [pnpm](https://pnpm.io/) (recommended for monorepo support, or use npm/yarn)
 
-### Utilities
+### Installation
 
-This Turborepo has some additional tools already setup for you:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Abhayaj247/Plexidraw.git
+   cd plexidraw
+   ```
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+2. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
 
-### Build
+3. **Start the development servers:**
+   ```bash
+   pnpm run dev
+   ```
+   (Or start each app individually as needed.)
 
-To build all apps and packages, run the following command:
+### Usage
 
-```
-cd my-turborepo
-pnpm build
-```
+- Visit `http://localhost:3000` to access the frontend.
+- Sign up or sign in to create or join drawing rooms.
+- Use the theme toggle in the navbar to switch between Light, Dark, and System themes.
+- Start drawing and chatting with your team!
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+## Project Structure
 
 ```
-npx turbo link
+apps/
+  plexidraw-frontend/   # Next.js frontend
+  http-backend/         # HTTP API backend
+  ws-backend/           # WebSocket backend
+packages/
+  common/               # Shared types and utilities
+  db/                   # Database and Prisma schema
+  ui/                   # Shared UI components (shadcn/ui)
 ```
 
-## Useful Links
+## Contributing
 
-Learn more about the power of Turborepo:
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+## License
+
+[MIT](LICENSE)
+
+---
+
+**Enjoy creative collaboration with PlexiDraw!**
